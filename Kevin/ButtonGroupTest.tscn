@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Kevin/ButtonGroupTest.gd" type="Script" id=1]
 [ext_resource path="res://Kevin/new_buttongroup.tres" type="ButtonGroup" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Sprites/Head_EmptySlot.png" type="Texture" id=6]
 [ext_resource path="res://Kevin/Sprite2Toggle.gd" type="Script" id=7]
 [ext_resource path="res://Sprites/Legs_EmptySlot.png" type="Texture" id=8]
+[ext_resource path="res://Kevin/Label.gd" type="Script" id=10]
 
 [sub_resource type="ButtonGroup" id=1]
 
@@ -134,5 +135,23 @@ position = Vector2( 551, 139 )
 texture = ExtResource( 8 )
 script = ExtResource( 7 )
 
+[node name="Label" type="Label" parent="Control"]
+margin_left = 328.0
+margin_top = 207.0
+margin_right = 612.0
+margin_bottom = 339.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton3" type="LinkButton" parent="Control"]
+margin_left = 50.0
+margin_top = 217.0
+margin_right = 282.0
+margin_bottom = 344.0
+text = "Button9999999999"
+
 [connection signal="pressed" from="Control/LinkButton" to="Control/Sprite" method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="Control/LinkButton2" to="Control/Sprite2" method="_on_LinkButton2_pressed"]
+[connection signal="pressed" from="Control/LinkButton3" to="Control/Label" method="_on_LinkButton3_pressed"]
