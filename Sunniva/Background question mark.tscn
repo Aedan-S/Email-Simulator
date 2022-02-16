@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 01 41.png" type="Texture" id=1]
 [ext_resource path="res://Sunniva/ChangePrefilledText.gd" type="Script" id=2]
@@ -8,72 +8,197 @@
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 14 38 54.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 10 41.jpg" type="Texture" id=7]
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 09 58.png" type="Texture" id=8]
-[ext_resource path="res://Sunniva/RichTextLabel.gd" type="Script" id=9]
+[ext_resource path="res://Fonts/JMH Typewriter-Bold.otf" type="DynamicFontData" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 29
 font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite"]
 position = Vector2( 511, 302 )
 scale = Vector2( 0.796875, 0.583984 )
 script = ExtResource( 2 )
 
+[node name="Button" type="Button" parent="."]
+margin_left = -77.8039
+margin_top = 383.572
+margin_right = 60.1961
+margin_bottom = 433.572
+text = "Randomize 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = -397.804
+margin_top = 385.284
+margin_right = -259.804
+margin_bottom = 435.284
+text = "Randomize 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = -233.412
+margin_top = 383.572
+margin_right = -95.4118
+margin_bottom = 433.572
+text = "Randomize 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 80.3138
+margin_top = 381.859
+margin_right = 218.314
+margin_bottom = 431.859
+text = "Randomize 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 use_parent_material = true
-margin_left = -458.0
-margin_top = -344.0
-margin_right = 208.0
-margin_bottom = 92.0
+anchor_left = -370.0
+anchor_top = -53.0
+anchor_right = 105.0
+anchor_bottom = 96.0
+margin_left = -113.137
+margin_top = -89.1271
+margin_right = 115.863
+margin_bottom = -108.127
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-visible_characters = 1
-percent_visible = 0.0714286
-text = "Text text text"
-script = ExtResource( 9 )
+text = "(Click button 3 to get a body)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 97.5238
-margin_top = -219.184
-margin_right = 290.524
-margin_bottom = -169.184
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+use_parent_material = true
+anchor_left = -370.0
+anchor_top = -53.0
+anchor_right = 105.0
+anchor_bottom = 96.0
+margin_left = -111.0
+margin_top = -300.0
+margin_right = 129.0
+margin_bottom = -377.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/bold_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
+text = "(Click button 1 to get a subject)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bilde16022022,151041" type="Sprite" parent="."]
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+use_parent_material = true
+anchor_left = -370.0
+anchor_top = -53.0
+anchor_right = 105.0
+anchor_bottom = 96.0
+margin_left = -114.0
+margin_top = -223.0
+margin_right = 115.0
+margin_bottom = -237.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "(Click button 2 to get an intro)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+use_parent_material = true
+anchor_left = -370.0
+anchor_top = -53.0
+anchor_right = 105.0
+anchor_bottom = 96.0
+margin_left = -114.392
+margin_top = 37.5886
+margin_right = 130.608
+margin_bottom = 23.5886
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "(Click button 4 to get a closer)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Bilde16022022,151041" type="Sprite" parent="Control"]
 position = Vector2( 6.10352e-05, 366.448 )
-z_index = -1
+scale = Vector2( 1, 1 )
+z_index = -2
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Bilde16022022,150958" type="Sprite" parent="."]
+[node name="Bilde16022022,150958" type="Sprite" parent="Control"]
 position = Vector2( -125.49, -46.8896 )
 scale = Vector2( 1.11148, 1.28246 )
+z_index = -2
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Bilde16022022,150141" type="Sprite" parent="."]
+[node name="Bilde16022022,150141" type="Sprite" parent="Control"]
 position = Vector2( 466.824, -327.064 )
 scale = Vector2( 0.230033, 0.306323 )
-z_index = -1
+z_index = -2
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Bilde16022022,144007" type="Sprite" parent="."]
+[node name="Bilde16022022,144007" type="Sprite" parent="Control"]
 position = Vector2( -481.451, 281.079 )
 scale = Vector2( 0.196732, 0.271126 )
+z_index = -2
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Bilde16022022,143854" type="Sprite" parent="."]
+[node name="Bilde16022022,143854" type="Sprite" parent="Control"]
 position = Vector2( 396.549, 34.2474 )
 scale = Vector2( 0.342018, 0.364323 )
-z_index = -1
+z_index = -2
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Bilde16022022,141409" type="Sprite" parent="."]
+[node name="Bilde16022022,141409" type="Sprite" parent="Control"]
 position = Vector2( 503.216, 210.622 )
 scale = Vector2( 0.437325, 0.451035 )
+z_index = -2
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
