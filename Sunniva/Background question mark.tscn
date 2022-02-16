@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 01 41.png" type="Texture" id=1]
 [ext_resource path="res://Sunniva/ChangePrefilledText.gd" type="Script" id=2]
@@ -9,6 +9,24 @@
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 10 41.jpg" type="Texture" id=7]
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 09 58.png" type="Texture" id=8]
 [ext_resource path="res://Fonts/JMH Typewriter-Bold.otf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=7]
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 29
@@ -22,45 +40,49 @@ size = 30
 font_data = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite"]
-position = Vector2( 511, 302 )
-scale = Vector2( 0.796875, 0.583984 )
+position = Vector2( 852, 558 )
 script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = -77.8039
-margin_top = 383.572
-margin_right = 60.1961
-margin_bottom = 433.572
+margin_left = -78.0
+margin_top = 384.0
+margin_right = 127.0
+margin_bottom = 476.0
+custom_fonts/font = SubResource( 4 )
 text = "Randomize 3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="."]
-margin_left = -397.804
-margin_top = 385.284
-margin_right = -259.804
-margin_bottom = 435.284
+margin_left = -505.0
+margin_top = 385.0
+margin_right = -300.0
+margin_bottom = 474.0
+custom_fonts/font = SubResource( 5 )
 text = "Randomize 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button3" type="Button" parent="."]
-margin_left = -233.412
-margin_top = 383.572
-margin_right = -95.4118
-margin_bottom = 433.572
+margin_left = -291.0
+margin_top = 383.0
+margin_right = -86.0
+margin_bottom = 475.0
+custom_fonts/font = SubResource( 6 )
 text = "Randomize 2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 80.3138
-margin_top = 381.859
-margin_right = 218.314
-margin_bottom = 431.859
+margin_left = 137.0
+margin_top = 385.0
+margin_right = 345.0
+margin_bottom = 473.0
+theme = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "Randomize 4"
 __meta__ = {
 "_edit_use_anchors_": false

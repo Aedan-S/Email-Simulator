@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Aedan/TheVideo.ogv" type="VideoStream" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends VideoPlayer
+
+func _ready():
+	self.connect(\"finished\", self, \"_on_Finished\")
+	self.set_process(false)
+	self.set_physics_process(false)
+
+func _on_Finished():
+	play()
+"
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+script = SubResource( 1 )

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sunniva/Label.gd" type="Script" id=1]
+
+[node name="Label" type="Label"]
+margin_right = 289.0
+margin_bottom = 112.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 208.0
+margin_bottom = 108.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 183.0
+margin_top = 9.0
+margin_right = 358.0
+margin_bottom = 126.0

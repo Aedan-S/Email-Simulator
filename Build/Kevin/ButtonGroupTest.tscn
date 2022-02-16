@@ -1,0 +1,157 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Kevin/ButtonGroupTest.gd" type="Script" id=1]
+[ext_resource path="res://Kevin/new_buttongroup.tres" type="ButtonGroup" id=2]
+[ext_resource path="res://Sprites/Chest_EmptySlot.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Boots_EmptySlot.png" type="Texture" id=4]
+[ext_resource path="res://Kevin/SpriteOnOff.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/Head_EmptySlot.png" type="Texture" id=6]
+[ext_resource path="res://Kevin/Sprite2Toggle.gd" type="Script" id=7]
+[ext_resource path="res://Sprites/Legs_EmptySlot.png" type="Texture" id=8]
+[ext_resource path="res://Kevin/Label.gd" type="Script" id=10]
+
+[sub_resource type="ButtonGroup" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 439.0
+margin_bottom = 217.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+group = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 20.0
+margin_top = 89.0
+margin_right = 144.0
+margin_bottom = 159.0
+toggle_mode = true
+group = SubResource( 1 )
+text = "Text 1"
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control"]
+margin_left = 89.0
+margin_top = 1.0
+margin_right = 172.0
+margin_bottom = 63.0
+toggle_mode = true
+group = SubResource( 1 )
+text = "Text 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Control"]
+margin_left = 176.0
+margin_top = 2.0
+margin_right = 259.0
+margin_bottom = 64.0
+toggle_mode = true
+group = SubResource( 1 )
+text = "Text 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Control"]
+margin_left = 267.0
+margin_top = 2.0
+margin_right = 350.0
+margin_bottom = 64.0
+toggle_mode = true
+group = SubResource( 1 )
+text = "Text 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="Control"]
+margin_left = 366.0
+margin_top = 2.0
+margin_right = 449.0
+margin_bottom = 64.0
+toggle_mode = true
+group = SubResource( 1 )
+text = "Text 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="Control"]
+margin_left = 463.0
+margin_top = 4.0
+margin_right = 546.0
+margin_bottom = 66.0
+toggle_mode = true
+group = SubResource( 1 )
+text = "Text 6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Control"]
+margin_right = 75.0
+margin_bottom = 70.0
+toggle_mode = true
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+
+[node name="LinkButton" type="LinkButton" parent="Control"]
+margin_left = 240.0
+margin_top = 92.0
+margin_right = 312.0
+margin_bottom = 170.0
+toggle_mode = true
+text = "Testttttt"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Control"]
+position = Vector2( 367, 143 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+
+[node name="LinkButton2" type="LinkButton" parent="Control"]
+margin_left = 440.0
+margin_top = 109.0
+margin_right = 529.0
+margin_bottom = 189.0
+toggle_mode = true
+text = "Test2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="Control"]
+position = Vector2( 551, 139 )
+texture = ExtResource( 8 )
+script = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 328.0
+margin_top = 207.0
+margin_right = 612.0
+margin_bottom = 339.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton3" type="LinkButton" parent="Control"]
+margin_left = 50.0
+margin_top = 217.0
+margin_right = 282.0
+margin_bottom = 344.0
+text = "Button9999999999"
+
+[connection signal="pressed" from="Control/LinkButton" to="Control/Sprite" method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="Control/LinkButton2" to="Control/Sprite2" method="_on_LinkButton2_pressed"]
+[connection signal="pressed" from="Control/LinkButton3" to="Control/Label" method="_on_LinkButton3_pressed"]
