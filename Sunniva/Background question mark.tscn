@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 01 41.png" type="Texture" id=1]
 [ext_resource path="res://Sunniva/ChangePrefilledText.gd" type="Script" id=2]
@@ -9,98 +9,297 @@
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 10 41.jpg" type="Texture" id=7]
 [ext_resource path="res://Sprites/Bilde 16.02.2022, 15 09 58.png" type="Texture" id=8]
 [ext_resource path="res://Fonts/JMH Typewriter-Bold.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://Aedan/TheVideo.ogv" type="VideoStream" id=10]
+[ext_resource path="res://Sunniva/dELETESELF.gd" type="Script" id=11]
+[ext_resource path="res://Aedan/ButtonResetScene.gd" type="Script" id=12]
+[ext_resource path="res://Fonts/JMH Typewriter-Black.otf" type="DynamicFontData" id=13]
+[ext_resource path="res://Aedan/submit still.png" type="Texture" id=14]
+[ext_resource path="res://Fonts/JMH Typewriter.otf" type="DynamicFontData" id=15]
+[ext_resource path="res://Aedan/emailbG.png" type="Texture" id=16]
+[ext_resource path="res://Sunniva/Panel8.gd" type="Script" id=17]
+[ext_resource path="res://Build/Fonts/JMH Typewriter-Black.otf" type="DynamicFontData" id=18]
+[ext_resource path="res://Sunniva/FinalPanel.gd" type="Script" id=19]
+[ext_resource path="res://Sunniva/Score.gd" type="Script" id=20]
 
-[sub_resource type="DynamicFont" id=4]
-size = 30
-font_data = ExtResource( 3 )
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.854902, 0.854902, 0.854902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.627451, 0.901961, 0.984314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.937255, 0.521569, 0.521569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.764706, 0.74902, 0.827451, 1 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 30
+use_filter = true
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.247059, 0.576471, 0.647059, 0.411765 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.247059, 0.576471, 0.647059, 1 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 30
+use_filter = true
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.0901961, 0.105882, 0.270588, 0.501961 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.0901961, 0.105882, 0.270588, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.0823529, 0.211765, 0.0862745, 0.498039 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.0823529, 0.211765, 0.0862745, 1 )
 
 [sub_resource type="Theme" id=7]
 
 [sub_resource type="DynamicFont" id=8]
 size = 30
+use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=1]
-size = 29
-font_data = ExtResource( 3 )
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.203922, 0.0784314, 0.231373, 0.486275 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.203922, 0.0784314, 0.231373, 1 )
 
 [sub_resource type="DynamicFont" id=2]
+use_filter = true
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 30
+size = 24
+use_filter = true
 font_data = ExtResource( 9 )
 
+[sub_resource type="DynamicFont" id=1]
+size = 24
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 21
+use_filter = true
+extra_spacing_char = 1
+font_data = ExtResource( 15 )
+
+[sub_resource type="GDScript" id=13]
+script/source = "extends VideoPlayer
+
+func _ready():
+	pass
+
+#func _on_Finished():
+#	play()
+
+
+func _on_SUBMIT_pressed():
+	play()
+	#self.connect(\"finished\", self, \"_on_Finished\")
+	#self.set_process(false)
+	#self.set_physics_process(false)
+"
+
+[sub_resource type="DynamicFont" id=14]
+size = 38
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.843137, 0.403922, 0.403922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.145098, 0.145098, 0.145098, 0.945098 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color( 0.411765, 0.831373, 0.427451, 1 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 52
+use_filter = true
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=31]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 80
+use_filter = true
+font_data = ExtResource( 18 )
+
 [node name="Sprite" type="Sprite"]
-position = Vector2( 852, 558 )
+position = Vector2( 1003, 596 )
+scale = Vector2( 1.23713, 1.21408 )
 script = ExtResource( 2 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = -78.0
-margin_top = 384.0
-margin_right = 127.0
-margin_bottom = 476.0
-custom_fonts/font = SubResource( 4 )
-text = "Randomize 3"
+[node name="Panel" type="Panel" parent="."]
+margin_left = -506.0
+margin_top = -396.0
+margin_right = 236.0
+margin_bottom = 132.0
+custom_styles/panel = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Panel" type="Panel" parent="Panel"]
+margin_top = 23.0
+margin_right = 743.0
+margin_bottom = 105.0
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="Panel"]
+margin_right = 743.0
+margin_bottom = 30.0
+custom_styles/panel = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Panel/Panel2"]
+margin_left = 711.0
+margin_right = 743.0
+margin_bottom = 24.0
+custom_styles/panel = SubResource( 12 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+rect_scale = Vector2( 0.636, 0.626 )
+texture = ExtResource( 16 )
+
+[node name="Panel3" type="Panel" parent="Panel"]
+margin_left = 44.0
+margin_top = 410.0
+margin_right = 541.0
+margin_bottom = 490.0
+custom_styles/panel = SubResource( 15 )
+
+[node name="Panel4" type="Panel" parent="Panel"]
+margin_left = 55.0
+margin_top = 169.0
+margin_right = 703.0
+margin_bottom = 251.0
+custom_styles/panel = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel7" type="Panel" parent="Panel"]
+margin_left = 57.0
+margin_top = 123.0
+margin_right = 703.0
+margin_bottom = 136.0
+custom_styles/panel = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel5" type="Panel" parent="Panel"]
+margin_left = 57.0
+margin_top = 206.0
+margin_right = 703.0
+margin_bottom = 208.0
+custom_styles/panel = SubResource( 25 )
+
+[node name="Panel6" type="Panel" parent="Panel"]
+margin_left = 57.3812
+margin_top = 125.836
+margin_right = 703.381
+margin_bottom = 127.836
+custom_styles/panel = SubResource( 25 )
+
 [node name="Button2" type="Button" parent="."]
-margin_left = -505.0
-margin_top = 385.0
-margin_right = -300.0
-margin_bottom = 474.0
+margin_left = -633.725
+margin_top = -258.633
+margin_right = -340.725
+margin_bottom = -169.633
+rect_scale = Vector2( 0.5, 0.5 )
+rect_clip_content = true
 custom_fonts/font = SubResource( 5 )
-text = "Randomize 1"
+custom_styles/hover = SubResource( 17 )
+custom_styles/pressed = SubResource( 21 )
+custom_styles/normal = SubResource( 17 )
+text = "Randomize Subject"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button3" type="Button" parent="."]
-margin_left = -291.0
-margin_top = 383.0
-margin_right = -86.0
-margin_bottom = 475.0
+margin_left = -627.258
+margin_top = -180.384
+margin_right = -351.258
+margin_bottom = -88.384
+rect_scale = Vector2( 0.5, 0.5 )
+rect_clip_content = true
 custom_fonts/font = SubResource( 6 )
-text = "Randomize 2"
+custom_styles/hover = SubResource( 18 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/normal = SubResource( 18 )
+text = "Randomize Intro"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -619.983
+margin_top = -91.4276
+margin_right = -359.983
+margin_bottom = 0.572449
+rect_scale = Vector2( 0.5, 0.5 )
+rect_clip_content = true
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/normal = SubResource( 19 )
+text = "Randomize Body"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 137.0
-margin_top = 385.0
-margin_right = 345.0
-margin_bottom = 473.0
+margin_left = -627.258
+margin_top = 9.06042
+margin_right = -351.258
+margin_bottom = 97.0604
+rect_scale = Vector2( 0.5, 0.5 )
+rect_clip_content = true
 theme = SubResource( 7 )
 custom_fonts/font = SubResource( 8 )
-text = "Randomize 4"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-use_parent_material = true
-anchor_left = -370.0
-anchor_top = -53.0
-anchor_right = 105.0
-anchor_bottom = 96.0
-margin_left = -113.0
-margin_top = -81.0
-margin_right = 116.0
-margin_bottom = -109.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/normal_font = SubResource( 1 )
-text = "(Click button 3 to get a body)"
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 24 )
+custom_styles/normal = SubResource( 20 )
+text = "Randomize Closer"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,14 +310,14 @@ anchor_left = -370.0
 anchor_top = -53.0
 anchor_right = 105.0
 anchor_bottom = 96.0
-margin_left = -111.0
-margin_top = -300.0
-margin_right = 129.0
-margin_bottom = -377.0
+margin_left = -5.0
+margin_top = -204.809
+margin_right = 101.0
+margin_bottom = -281.809
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/bold_font = SubResource( 2 )
 custom_fonts/normal_font = SubResource( 3 )
-text = "(Click button 1 to get a subject)"
+text = "(Subject)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -129,13 +328,30 @@ anchor_left = -370.0
 anchor_top = -53.0
 anchor_right = 105.0
 anchor_bottom = 96.0
-margin_left = -114.0
-margin_top = -212.0
-margin_right = 115.0
-margin_bottom = -237.0
+margin_left = -78.6188
+margin_top = -124.913
+margin_right = 89.0001
+margin_bottom = -149.913
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "(Click button 2 to get an intro)"
+text = "(Intro)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+use_parent_material = true
+anchor_left = -370.0
+anchor_top = -53.0
+anchor_right = 105.0
+anchor_bottom = 96.0
+margin_left = -77.8105
+margin_top = -50.7826
+margin_right = 86.1916
+margin_bottom = -78.7826
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "(Body)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -146,13 +362,30 @@ anchor_left = -370.0
 anchor_top = -53.0
 anchor_right = 105.0
 anchor_bottom = 96.0
-margin_left = -114.0
-margin_top = 56.0
-margin_right = 131.0
-margin_bottom = 23.0
+margin_left = -73.7689
+margin_top = 67.8261
+margin_right = -59.0
+margin_bottom = 34.8261
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "(Click button 4 to get a closer)"
+text = "(Closer)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+use_parent_material = true
+anchor_left = -370.0
+anchor_top = -53.0
+anchor_right = 105.0
+anchor_bottom = 96.0
+margin_left = -47.0943
+margin_top = -249.287
+margin_right = 197.906
+margin_bottom = -282.287
+custom_colors/default_color = Color( 0.729412, 0.729412, 0.729412, 1 )
+custom_fonts/normal_font = SubResource( 16 )
+text = "charlie.worker@employermail.com"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -168,7 +401,7 @@ __meta__ = {
 
 [node name="Bilde16022022,151041" type="Sprite" parent="Control"]
 position = Vector2( 6.10352e-05, 366.448 )
-scale = Vector2( 1, 1 )
+scale = Vector2( 1.97, 1 )
 z_index = -2
 texture = ExtResource( 7 )
 __meta__ = {
@@ -186,7 +419,7 @@ __meta__ = {
 
 [node name="Bilde16022022,150141" type="Sprite" parent="Control"]
 position = Vector2( 466.824, -327.064 )
-scale = Vector2( 0.230033, 0.306323 )
+scale = Vector2( 0.230033, 0.269276 )
 z_index = -2
 texture = ExtResource( 1 )
 __meta__ = {
@@ -194,8 +427,8 @@ __meta__ = {
 }
 
 [node name="Bilde16022022,144007" type="Sprite" parent="Control"]
-position = Vector2( -481.451, 281.079 )
-scale = Vector2( 0.196732, 0.271126 )
+position = Vector2( -506.818, 279.224 )
+scale = Vector2( 0.173313, 0.17543 )
 z_index = -2
 texture = ExtResource( 4 )
 __meta__ = {
@@ -220,7 +453,119 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="Control2" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 29.9079
+margin_top = -22.2391
+margin_right = 192.908
+margin_bottom = 85.199
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="Control2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 10 )
+volume_db = -20.63
+script = SubResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResetButton" type="Button" parent="Control2"]
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+margin_left = -842.0
+margin_top = -451.11
+margin_right = -733.0
+margin_bottom = -378.329
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 14 )
+custom_styles/normal = SubResource( 29 )
+text = "Reset"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SUBMIT" type="Button" parent="Control2"]
+margin_left = -9.28613
+margin_top = -5.13708
+margin_right = 805.613
+margin_bottom = 504.863
+rect_scale = Vector2( 0.221199, 0.228122 )
+text = "SUBMIT"
+icon = ExtResource( 14 )
+flat = true
+clip_text = true
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel8" type="Panel" parent="Control2"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 145.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 15 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinalPanel" type="Panel" parent="Control2"]
+visible = false
+margin_left = -672.0
+margin_top = -247.0
+margin_right = 344.0
+margin_bottom = 98.0
+custom_styles/panel = SubResource( 26 )
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="Control2/FinalPanel"]
+margin_left = 313.913
+margin_top = 39.4348
+margin_right = 792.913
+margin_bottom = 131.435
+custom_fonts/font = SubResource( 27 )
+custom_styles/normal = SubResource( 28 )
+text = "Email Score:"
+
+[node name="TextEdit3" type="TextEdit" parent="Control2/FinalPanel"]
+margin_left = 405.254
+margin_top = 265.944
+margin_right = 884.254
+margin_bottom = 357.944
+custom_colors/font_color = Color( 0.470588, 0.470588, 0.470588, 1 )
+custom_fonts/font = SubResource( 31 )
+custom_styles/normal = SubResource( 28 )
+text = "Well Done!"
+
+[node name="TextEdit2" type="TextEdit" parent="Control2/FinalPanel"]
+margin_left = 445.67
+margin_top = 140.746
+margin_right = 563.67
+margin_bottom = 250.746
+custom_colors/font_color = Color( 0.301961, 0.760784, 0.129412, 1 )
+custom_fonts/font = SubResource( 30 )
+custom_styles/normal = SubResource( 28 )
+text = "00"
+script = ExtResource( 20 )
+
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Button4" to="Control2/Panel8" method="_on_Button4_pressed"]
+[connection signal="pressed" from="Control2/ResetButton" to="Control2/ResetButton" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control2/SUBMIT" to="Control2/VideoPlayer" method="_on_SUBMIT_pressed"]
+[connection signal="pressed" from="Control2/SUBMIT" to="Control2/SUBMIT" method="_on_SUBMIT_pressed"]
+[connection signal="pressed" from="Control2/SUBMIT" to="Control2/FinalPanel" method="_on_SUBMIT_pressed"]
