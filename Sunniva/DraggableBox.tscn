@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sunniva/Yeeeee.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 27.0
+margin_top = 12.0
+margin_right = 144.0
+margin_bottom = 88.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 76.0
+margin_bottom = 36.0
+text = "Dearly beloved...."
+
+[connection signal="gui_input" from="Panel" to="Panel" method="_on_Panel_gui_input"]
