@@ -1,7 +1,38 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprites/NotePaperBG.jpg" type="Texture" id=1]
+[ext_resource path="res://Sunniva/ChangePrefilledText.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/JMH Typewriter.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 29
+font_data = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite"]
-position = Vector2( 641, 515 )
+position = Vector2( 316, 302 )
+scale = Vector2( 0.492188, 0.583984 )
 texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = -553.0
+margin_top = -221.0
+margin_right = 91.0
+margin_bottom = -8.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Text text text"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 97.5238
+margin_top = -219.184
+margin_right = 290.524
+margin_bottom = -169.184
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
